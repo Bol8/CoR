@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Repository.BaseType>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tipos de Acuerdo</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-xs-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr role="row">
+                        <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="width: 150px;">
+                           @Html.DisplayNameFor(model => model.idBaseType)
+                        </th>
+                        <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="width: 150px;">
+                            @Html.DisplayNameFor(model => model.NameBaseType)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.idBaseType)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NameBaseType)
+                            </td>
+                           
+                            <td>
+                                @Html.ActionLink("Add Fields", "AddFields", "Basetype", new { id = item.idBaseType }, null)
+                                @Html.ActionLink("Detalles", "Details","Basetype", new { id = item.idBaseType },null) 
+                                @*@Html.ActionLink("Delete", "Delete", new { id = item.idCONTACTO })*@
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+

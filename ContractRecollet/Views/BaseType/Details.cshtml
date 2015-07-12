@@ -1,0 +1,44 @@
+﻿@model Repository.BaseType
+
+@{
+    ViewBag.Title = "Details";
+    // Layout = "~/Views/BaseType/Create.cshtml";
+
+    var listFieldsTemplates = Model.BaseFieldsTemplates;
+
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>@Html.DisplayFor(model => model.NameBaseType)</h4>
+    <hr />
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="well">
+
+                @foreach (var field in listFieldsTemplates)
+                {
+
+                   <dl class="dl-horizontal"> 
+                       <dt>
+                           @Html.DisplayNameFor(model => field.BaseFieldType.NameField)
+                       </dt>
+                       <dd>
+                           @Html.DisplayFor(model => field.BaseFieldType.NameField)
+                       </dd>
+                   </dl>
+
+
+                }
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idBaseType }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
