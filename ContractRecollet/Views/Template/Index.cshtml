@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Repository.BaseFieldsTemplate>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdBaseField)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MandatoryField)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DefaultValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BaseFieldType.NameField)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BaseType.NameBaseType)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdBaseField)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MandatoryField)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DefaultValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BaseFieldType.NameField)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BaseType.NameBaseType)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdBaseFieldTemplate }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdBaseFieldTemplate }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdBaseFieldTemplate })
+        </td>
+    </tr>
+}
+
+</table>
+
+@*<script type="text/javascript">
+
+        $(document).ready(function () {
+
+            alert("Hola");
+
+
+            $(".ajaxPartialContents").each(function (index, item) {
+
+                alert("Hola");
+
+
+                var url = $(item).data("url");
+                if (url && url.length > 0) {
+                    $(item).load(url);
+                }
+
+
+            });
+
+        });
+
+
+    </script>*@
+
+<script type="text/javascript">
+    $(document).ready(
+        function () {
+            loadScriptAndInit();
+        });
+</script> 

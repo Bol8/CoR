@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Repository;
 using Domain.Management;
+using Domain.Entidades;
 
 namespace ContractRecollet.Controllers
 {
@@ -15,10 +16,7 @@ namespace ContractRecollet.Controllers
         // GET: Template
         public ActionResult Index()
         {
-
-
-
-            return View();
+            return View(Template.getFieldsTemplates());
         }
 
         // GET: Template/Details/5

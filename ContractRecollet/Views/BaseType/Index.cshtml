@@ -13,7 +13,7 @@
                 <thead>
                     <tr role="row">
                         <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="width: 150px;">
-                           @Html.DisplayNameFor(model => model.idBaseType)
+                            @Html.DisplayNameFor(model => model.idBaseType)
                         </th>
                         <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style="width: 150px;">
                             @Html.DisplayNameFor(model => model.NameBaseType)
@@ -30,10 +30,10 @@
                             <td>
                                 @Html.DisplayFor(modelItem => item.NameBaseType)
                             </td>
-                           
+
                             <td>
                                 @Html.ActionLink("Add Fields", "AddFields", "Basetype", new { id = item.idBaseType }, null)
-                                @Html.ActionLink("Detalles", "Details","Basetype", new { id = item.idBaseType },null) 
+                                @Html.ActionLink("Detalles", "Details", "Basetype", new { id = item.idBaseType }, null)
                                 @*@Html.ActionLink("Delete", "Delete", new { id = item.idCONTACTO })*@
                             </td>
                         </tr>
@@ -44,8 +44,5 @@
             </table>
         </div>
     </div>
+
 </div>
-
-
-
-

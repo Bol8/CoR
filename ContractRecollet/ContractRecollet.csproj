@@ -459,10 +459,10 @@
     <Content Include="Views\BaseType\Create.cshtml" />
     <Content Include="Views\BaseType\Details.cshtml" />
     <Content Include="Views\BaseType\addFields.cshtml" />
+    <Content Include="Views\Template\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Template\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
